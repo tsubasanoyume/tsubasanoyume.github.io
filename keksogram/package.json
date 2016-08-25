@@ -1,0 +1,25 @@
+{
+  "name": "keksogram",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Обучающий проект «keksogram» от HTML Academy",
+  "author": "DudaGod",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DudaGod/keksogram.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DudaGod/keksogram/issues"
+  },
+  "homepage": "https://github.com/DudaGod/keksogram",
+  "devDependencies": {
+    "eslint": "1.5.1"
+  },
+  "scripts": {
+    "gosha": "make",
+    "test": "eslint js/"
+  },
+  "engines": {
+    "node": "^0.12.7"
+  }
+}
