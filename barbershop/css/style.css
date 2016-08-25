@@ -1,0 +1,574 @@
+body {
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT Sans Narrow", "Verdana", "Arial", sans-serif;	/*Нужно указать еще запасной шрифт. Чтоб если этот не загрузится был другой, системный.*/
+	margin: 0;
+	padding: 0;
+
+	font-weight: 700;
+  	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 30px;
+	line-height: 56px;
+}
+
+h2 {
+	font-size: 24px;
+	line-height: 42px;
+}
+
+/* распорка */
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* стили для визуализации блоков */
+/*Их уже можно убарть.*/
+
+.container {
+	width: 940px; 
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.main-contain .container {
+	padding: 47px 10px;
+}
+
+.main-header {
+	font-size: 16px;
+	background: #000;
+}
+
+
+/* стили меню */
+
+.navigation-list {
+	width: 780px;
+	float: left;
+}
+.navigation-list ul {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	list-style: none;
+}
+
+.navigation-list li {
+	display: inline-block;
+	vertical-align: top;
+
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.navigation-list a {
+	display: block;
+	padding: 25px 20px;
+	text-decoration: none;
+	color: white;
+}
+
+.navigation-list a:hover {
+	background: #242424;
+}
+
+.navigation-list .active a {
+	position: relative;
+}
+
+.navigation-list .active a:hover {
+  	background: none;
+}
+
+.navigation-list .active a:after {
+  	content: "";
+  	position: absolute;
+  	bottom: 0;
+  	left: 20px;
+  	right: 20px;
+  	height: 5px;
+  	background: white;
+}
+
+/* стили для входа */
+.user-block {
+	max-width: 140px;
+
+	float: right;
+}
+
+.login {
+	display: inline-block;
+	vertical-align: top;
+	padding: 25px 20px;
+	font-size: 16px;
+	line-height: 20px;
+	text-decoration: none;
+	color: white;
+	position: relative;
+	padding-left: 50px;
+}
+
+.login:hover {
+  	background: #242424;
+}
+
+.login::before {
+	content: "";
+	position: absolute;
+	top: 28px;
+  	left: 20px;
+  	width: 18px;
+  	height: 18px;
+  	background: transparent url("../img/icon-login.png") no-repeat;
+  	opacity: .3;
+}
+
+.login:hover::before { /*Для before нужно два двоеточия*/
+  	opacity: 1;
+}
+
+/* стили контейнера */
+
+.main-contain {
+	background: #f8f5f2 url("../img/bg-content.png");
+}
+
+.contain-header {
+	margin-bottom: 49px;
+}
+
+.contain-title {
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+.breadcrumbs {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.breadcrumbs li {
+	display: inline-block;
+	margin-right: 15px;
+	position: relative;
+}
+
+.breadcrumbs a {
+	padding-right: 15px;
+	margin-right: 10px;
+	display: block;
+	text-decoration: none;
+	color: black;
+	line-height: 24px;
+}
+/*Лучше ромбики привязать к li, тогда они не будут являться частью ссылки.*/
+.breadcrumbs li:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 8px;
+	height: 8px;
+	background: black;
+	top: 50%;
+	right: 0;
+	margin-top: -4px;
+	transform: rotate(45deg);
+}
+
+.breadcrumbs li:last-child a { /*Если ты обратишь внимание, активным элементом всегда является последняя ссылка. Можно не добавлять лишний класс, а воспользоваться псевдоэлементом last-child*/
+	color: #aba9a7;
+	cursor: default;
+	pointer-events: none;
+}
+
+/* стили фильтров */
+.filters {
+	width: 220px;
+
+	float: left;
+}
+
+.filters-title {
+	margin-top: 0;
+	margin-bottom: 13px;
+}
+
+.filters-maker {
+	margin-bottom: 25px;
+}
+
+.filters-category {
+	margin-bottom: 34px;
+}
+
+.filters-maker input[type="checkbox"],
+.filters-category input[type="radio"] {
+	display: none;
+}
+
+.filters-maker input[type="checkbox"] + label,
+.filters-category input[type="radio"] + label {
+	display: block;
+	margin-bottom: 18px;
+	cursor: pointer;
+}
+
+.filters-maker input[type="checkbox"] + label:hover,
+.filters-category input[type="radio"] + label:hover {
+	color: #663d15;
+}
+
+.filters-maker input[type="checkbox"] + label::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 23px;
+	vertical-align: middle;
+	margin-top: -5px;
+	background: url("../img/icon-checkbox.png") no-repeat center;
+}
+
+.filters-maker input[type="checkbox"]:checked + label::before {
+	background: url("../img/icon-checked.png") no-repeat center;
+}
+
+.filters-category input[type="radio"] + label::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 23px;
+	vertical-align: middle;
+	margin-top: -5px;
+	background: url("../img/icon-radio.png") no-repeat center;
+}
+
+.filters-category input[type="radio"]:checked + label::before {
+	background: url("../img/icon-radio-checked.png") no-repeat center;
+}
+
+.btn {
+	padding: 10px 30px;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	font-family: "PT Sans Narrow", "Verdana", "Arial", sans-serif;
+	font-weight: 700;
+  	text-transform: uppercase;
+  	text-align: center;
+  	color: white;
+  	background: black;
+  	border: 0;
+	outline: none;
+  	cursor: pointer;
+}
+
+.btn:hover,
+.btn:active,
+.paginator a:hover {
+  	background: #663d15;
+}
+
+/* стили блока с продуктами */
+.products {
+	margin-top: 9px;
+	width: 700px;
+	font-size: 0;
+
+	float: right;
+}
+
+.products-item {
+	width: 220px;
+	font-size: 14px;
+	background: white;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.products-item:hover,
+.images-preview:hover {
+	-moz-box-shadow: 5px 5px 25px 0 #afaeac;
+    -webkit-box-shadow: 5px 5px 25px 0 #afaeac;
+    box-shadow: 5px 5px 25px 0 #afaeac;
+}
+
+.products-item,
+.images-big,
+.images-preview {
+	-moz-box-shadow: 0 0 15px 0 #afaeac;
+    -webkit-box-shadow: 0 0 15px 0 #afaeac;
+    box-shadow: 0 0 15px 0 #afaeac;
+}
+
+.products-item:nth-child(3n) { /*А если элементов будет 9,12, 15? Так и будешь добавлять лишние правила? Нужно использовать конструкцию (3n), таким образом это правило будет для каждого 3 элемента применяться.*/
+	margin-right: 0;
+}
+
+.products-info {
+	padding: 15px;
+}
+
+.products-info a {
+	text-decoration: none;
+	text-transform: none;
+	color: black;
+	line-height: 18px;
+}
+
+.products-title {
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 15px;	
+}
+
+
+
+.products-price p,
+.products-price a {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+}
+
+.products-price p{ /*Не не не. Зачем абсолютное позиционирование? К чему эти танцы? Можно просто воспользоваться display:inline-block и все будет точно также с более простым подходом.*/
+	background: #e5e5e5;
+	width: 110px;
+	height: 15px;
+	padding: 15px 0;
+	text-align: center;
+	line-height: 18px;
+	margin: 0;
+	margin-right: -3px;
+}
+
+.products-price .btn {
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 15px 0;
+	width: 80px;
+	height: 15px;
+	margin: 0;
+	margin-right: -3px;
+}
+
+/* стили переключателя страниц */
+.paginator {
+	font-size: 14px;
+	margin-top: 24px;
+}
+
+.paginator a,
+.paginator span {
+	display: inline-block;
+	width: 7px;
+	height: 23px;
+	padding: 10px 18px;
+	margin-right: 7px;
+	text-align: center;
+}
+
+.paginator a {
+	background: black;
+	color: white;
+	text-decoration: none;
+}
+
+.paginator span {
+	background: white;
+}
+
+
+
+/* стили блока с картинками */
+.contain-images {
+	width: 480px;
+
+	float: left;
+}
+
+.contain-images > figure {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.images-prev {
+	width: 460px;
+	font-size: 0;
+}
+
+.images-prev figure {
+	display: inline-block;
+	margin: 0;
+	margin-right: 20px;	
+}
+
+.images-prev figure:last-child {
+	margin-right: 0;
+}
+
+/* стили блока с информацией по продукту */
+.contain-info {
+	width: 380px;
+	padding: 10px;
+
+	float: right;
+}
+
+.contain-info .btn {
+	padding: 10px 0;
+	height: 25px;
+}
+
+.info-header,
+.info-description {
+	margin-bottom: 29px;
+}
+
+.info-contains h2 {
+	margin-bottom: 26px;
+}
+
+.info-stock {
+	width: 150px;
+
+	float: left;
+}
+
+.info-article {
+	width: 150px;
+	text-align: right;
+	color: #aba9a7;
+
+	float: right;
+}
+
+/* стили для кнопки с ценой */
+.contain-info .products-price {
+	margin-bottom: 43px;
+}
+
+.contains-list {
+	list-style: none;
+	position: relative;
+}
+
+.contains-list li::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 8px;
+	height: 8px;
+	background: black;
+	left: 20px;
+	margin-top: 8px;
+	transform: rotate(45deg);
+}
+
+/* стили футера */
+
+.main-footer {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	background: #252525 url("../img/bg-footer.png");
+	color: white;
+}
+
+.footer-contacts {
+	width: 320px;
+	margin-right: 80px;
+
+	float: left;
+}
+
+.footer-contacts a {
+	color: white;
+}
+
+.footer-contacts a:hover {
+	text-decoration: none;
+}
+
+/* стили социальных кнопок */
+.footer-social {
+	text-align: center;
+
+	float: left;
+}
+
+.footer-social p {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.footer-copyright {
+	max-width: 320px;
+
+	float: right;
+}
+
+.footer-copyright p {
+	margin: 0;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.social {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 2px;
+	width: 43px;
+	height: 43px;
+	font-size: 0;
+	text-decoration: none;
+	background: black url("../img/icon-social.png") no-repeat center;
+}
+
+.social:hover {
+	background: white url("../img/icon-social-active.png") no-repeat center;
+}
+
+.social-vk {
+	background-position: 9px 10px;
+}
+
+.social-vk:hover {
+	background-position: 9px 10px;
+}
+
+.social-fb {
+	background-position: -41px 10px;
+}
+
+.social-fb:hover {
+	background-position: -41px 10px;
+}
+
+.social-instgrm {
+	background-position: -89px 10px;
+}
+
+.social-instgrm:hover {
+	background-position: -89px 10px;
+}
+
+.footer-copyright .btn {
+	margin-right: 0;
+}
+
+.footer-copyright .btn:hover {
+	background: white;
+	color: black;
+}
