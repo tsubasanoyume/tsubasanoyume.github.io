@@ -1,20 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title>Портфолио веб-разработчика Лены Лебедевой</title>
 		<link rel="stylesheet" href="css/normalize.css">
-		<link href="css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<p>Сайт находится в разработке! Можете пока пожамкать на ссылочки ниже =)</p>
-		<a href="sedona/index.html">Седона</a><br>
-		<a href="code-and-magick/index.html">Код и магия</a><br>
-		<a href="keksogram/index.html">Кексограм</a><br>
-		<a href="nerds/index.html">Нёрдс</a><br>
-		<a href="barbershop/catalog.html">Барбершоп</a>
-		<div>
-
-		</div>
+		<header class="main-header">
+			<div class="container">
+				<nav class="header-navigation">
+					<ul class="navigation-list">
+						<li>
+							<a href="#about">Обо мне</a>
+						</li>
+						<li>
+							<a href="#portfolio">Портфолио</a>
+						</li>
+						<li>
+							<a href="#connection">Напишите мне</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="main-container">
+			<div class="container main">
+				<div class="about-me">
+					<h2 class="block-title" id="about">Обо мне</h2>
+					<figure class="about-block my-beaty-photo">
+						<img src="img/Koala.jpg" width="300" height="300" alt="My photo" />
+					</figure>
+					<div class="about-block my-info">
+						<h2>Здравствуйте!</h2>
+						<p>
+							Я Лена Лебедева - начинающий frontend-разработчик. Очень люблю верстать и оживлять интерфейсы.
+							Прошла инстенсивы на HTMLAcademy: "Базовый HTML и CSS" и "Базовый JavaScript". В настоящий момент
+							работаю в ОАО НИИАС на позиции "Программист JavaScript". В работе использую HTML, CSS, ExtJS, jQuery и Raphael.
+							Имею больше двух лет опыта работы в тестировании веб-приложений. Работала с системами контроля версий SVN и Git,
+							с багтрекинговыми системами JIRA и Redmine. Также неплохо владею mySQL. Люблю семантическую и pixel perfect вёрстку.
+							Код работ можно посмотреть <a href="https://github.com/tsubasanoyume" class="about-git">здесь</a>.
+						</p>
+					</div>
+				</div>
+				<div class="my-works">
+					<h2 class="block-title" id="portfolio">Мои работы</h2>
+					<article class="works-item">
+						<a href="sedona/index.html" class="work-title">
+							Sedona
+						</a>
+						<a href="sedona/index.html" class="work-image">
+							<img src="img/sedona.png" width="432" height="300" alt="Sedona" />
+						</a>
+						<p class="work-description">
+							Учебный макет на интенсиве "Базовый HTML и CSS" в HTMLAcademy: семантическая, кроссбраузерная, резиновая вёрстка по макету
+							(доступны страницы "Информация" и "Гостиницы")
+						</p>
+					</article>
+					<article class="works-item">
+						<a href="code-and-magick/index.html" class="work-title">
+							Код и магия
+						</a>
+						<a href="code-and-magick/index.html" class="work-image">
+							<img src="img/code_and_magic.png" width="432" height="300" alt="Code and Magick" />
+						</a>
+						<p class="work-description">
+							Учебный макет на интенсиве "Базовый JavaScript" в HTMLAcademy: нативный JS, BackboneJS, underscore, requireJS,
+							эффект параллакс, canvas, AJAX, JSON, фильтрация, сортировка и валидация формы отзыва
+						</p>
+					</article>
+					<article class="works-item">
+						<a href="#" class="work-title">
+							Nerds
+						</a>
+						<a href="#" class="work-image">
+							<img src="#" width="0" height="0" alt="Nerds" />
+						</a>
+						<p class="work-description">
+							Учебный макет на интенсиве "Базовый HTML и CSS" в HTMLAcademy: семантическая, кроссбраузерная вёрстка по макету
+							(доступны страницы "Студия" и "Магазин", <span class="mark">вёрстка по своему желанию, находится в работе</span>)
+						</p>
+					</article>
+					<article class="works-item">
+						<a href="#" class="work-title">
+							Barbershop
+						</a>
+						<a href="#" class="work-image">
+							<img src="#" width="0" height="0" alt="Barbershop" />
+						</a>
+						<p class="work-description">
+							Тренировочный макет на интенсиве "Базовый HTML и CSS" в HTMLAcademy: семантическая, кроссбраузерная вёрстка по макету
+							(доступны страницы "Магазин" и товар "Baxter of California", <span class="mark">начальная страница в разработке</span>)
+						</p>
+					</article>
+					<article class="works-item">
+						<a href="#" class="work-title">
+							Keksogram
+						</a>
+						<a href="#" class="work-image">
+							<img src="#" width="0" height="0" alt="Keksogram" />
+						</a>
+						<p class="work-description">
+							Учебный макет на интенсиве "Базовый JavaScript" в HTMLAcademy: <span class="mark">без вёрстки, работа над JS еще не начата</span>
+						</p>
+					</article>
+				</div>
+				<div class="connection-form-container">
+					<h2 class="block-title" id="connection">Напишите мне</h2>
+					<p>Заполните все поля и отправьте форму - информация придёт ко мне на e-mail и я оперативно отвечу =)</p>
+					<form action="https://formspree.io/tsubasaro@gmail.com" method="post" class="connection-form">
+						<label for="name">Имя</label>
+						<input type="text" name="name" id="name" required/>
+						<label for="email">E-mail</label>
+						<input type="email" name="_replyto" id="email" required/>
+						<label for="comment">Опишите ваше предложение</label>
+						<textarea name="comment" id="comment" rows="5" required></textarea>
+						<input type="submit" class="btn-submit" value="Отправить" />
+					</form>
+				</div>
+			</div>
+		</main>
+		<footer class="main-footer">
+			<div class="container">
+				<section class="footer-contain">
+					Design & Website<br><span>Lena Lebedeva</span>
+				</section>
+			</div>
+		</footer>
 	</body>
 </html>
