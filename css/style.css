@@ -70,12 +70,10 @@ figure {
 .navigation-list li {
     display: inline-block;
     vertical-align: top;
-    width: 20%;
-    min-height: 50px;
 }
 
 .navigation-list li:first-child {
-    margin-left: 40%;
+    margin-left: 59%;
 }
 
 .navigation-list a {
@@ -87,7 +85,7 @@ figure {
     text-transform: uppercase;
     color: #bfd6d3;
     line-height: 26px;
-    text-align: right;
+    text-align: center;
 }
 
 .navigation-list a:hover {
