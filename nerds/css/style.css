@@ -202,7 +202,7 @@ span.icon-basket {
 
 .contain-introduction {
 	overflow: auto;
-	padding-top: 27px;
+	padding-top: 10px;
 }
 
 .contain-title {
@@ -211,11 +211,11 @@ span.icon-basket {
 }
 
 .contain-title h2 {
-	margin-bottom: 27px;
+	margin-bottom: 20px;
 }
 
 .contain-title p {
-	margin-bottom: 33px;
+	margin-bottom: 25px;
 }
 
 .contain-image {
@@ -240,7 +240,7 @@ span.icon-basket {
 	font-weight: 400;
 	background: #fb565a;
 	text-align: center;
-	padding: 13px 0;
+	padding: 10px 0;
 	width: 140px;
 	border-radius: 5px;
 }
@@ -254,10 +254,15 @@ span.icon-basket {
 	border-bottom: 2px solid #eeeeee;
 }
 
+.features-title {
+	margin-bottom: 15px;
+}
+
 .features-item {
-	width: 240px;
+	width: 239px;
 	font-size: 15px;
 	display: inline-block;
+	vertical-align: middle;
 	margin-right: 76px;
 }
 
@@ -266,7 +271,7 @@ span.icon-basket {
 }
 
 .features-item p {
-	margin-bottom: 32px;
+	margin-bottom: 25px;
 }
 
 .btn-reserve-green {
@@ -278,7 +283,7 @@ span.icon-basket {
 }
 
 .contain-info {
-	padding: 50px 0;
+	padding: 50px 0 40px 0;
 	border-bottom: 2px solid #eeeeee;
 }
 
@@ -287,13 +292,12 @@ span.icon-basket {
 }
 
 .info-title h2 {
-	margin-top: 15px;
-	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 18px;
 }
 
 .info-title-nerds figure {
-	margin: 0;
-	margin-bottom: 25px;
+	margin: 8px 0 20px 10px;
 	text-align: center;
 }
 
@@ -356,47 +360,64 @@ span.icon-basket {
 }
 
 .contain-logo {
-	padding: 30px 10px 15px;
+	height: 95px;
+	padding: 43px 8px 27px;
 	border-bottom: 2px solid #eeeeee;
 }
 
 .logo-feature {
 	display: inline-block;
-	vertical-align: middle;
-	font-size: 0;
-	height: 120px;
+	vertical-align: top;
+	font-size: 16px;
+	line-height: 110px;
 	width: 210px;
-	margin-right: 110px;
-	opacity: .2;
-}
-
-.logo-feature:nth-child(3n) {
-	margin-right: 0;
-}
-
-.logo-feature:first-child {
-	background: url('../img/logo-glukhanko.png') no-repeat center;
+	margin-right: 100px;
+	text-align: center;
 }
 
 .logo-feature:nth-child(2) {
-	background: url('../img/logo-htmlacademy.png') no-repeat center;
+	padding-top: 10px;
 }
 
-.logo-feature:last-child {
-	background: url('../img/logo-borodinsky.png') no-repeat center;
-	background-size: contain;
+.logo-feature:nth-child(3n) {
+	padding-left: 15px;
+	margin-right: 0;
 }
 
-.logo-feature:hover {
+.logo-feature a {
+	opacity: .2;
+}
+
+.logo-feature a:hover {
 	opacity: 1;
 }
 
 .contain-map {
 	padding: 85px 0;
+	position: relative;
 }
 
 .map {
 	height: 415px;
-	background: url('../img/map.jpg') no-repeat;
+	background: url('../img/map.png') no-repeat;
 	background-size: cover;
+}
+
+.map-contacts {
+	position: absolute;
+	top: 175px;
+	left: 510px;
+
+	height: 180px;
+	width: 210px;
+	padding: 30px 20px;
+	background: #fff;
+}
+
+.map-contacts h3 {
+	margin: 0;
+}
+
+.btn-contacts {
+	width: 100%;
 }
