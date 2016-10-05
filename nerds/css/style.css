@@ -97,10 +97,6 @@ h4 {
   clear: both;
 }
 
-.outline-cont {
-	outline: 2px solid red;
-}
-
 .main-header {
 	padding: 27px 0;
 	background-color: #eeeeee;
@@ -147,7 +143,8 @@ h4 {
 	color: #000;
 }
 
-.navigation-list a:hover {
+.navigation-list a:hover,
+.basket a:hover {
 	color: #fb565a;
 }
 
@@ -188,12 +185,18 @@ h4 {
 */
 
 li.basket {
+	position: relative;
 	margin-right: 0;	
 }
 
-span.icon-basket {
-	color: #bdbdbd;
-	padding-right: 10px;
+.basket a:before {
+	content: '\62';
+	font-family: symbols-nerds;
+	top: 27px;
+	left: -20px;
+	text-transform: none;
+	color: #a6a6a6;
+	position: absolute;
 }
 
 .contain-some {
@@ -363,6 +366,7 @@ span.icon-basket {
 	height: 95px;
 	padding: 43px 8px 27px;
 	border-bottom: 2px solid #eeeeee;
+	margin-bottom: 85px;
 }
 
 .logo-feature {
@@ -393,8 +397,8 @@ span.icon-basket {
 }
 
 .contain-map {
-	padding: 85px 0;
 	position: relative;
+	margin-bottom: 75px;
 }
 
 .map {
@@ -405,7 +409,7 @@ span.icon-basket {
 
 .map-contacts {
 	position: absolute;
-	top: 175px;
+	top: 90px;
 	left: 510px;
 
 	height: 180px;
@@ -420,4 +424,43 @@ span.icon-basket {
 
 .btn-contacts {
 	width: 100%;
+}
+
+.container-footer {
+	margin-bottom: 59px;
+}
+
+.footer-title {
+	float: left;
+	min-width: 440px;
+}
+
+.footer-title h2 {
+	margin: 0;
+}
+
+.footer-title p {
+	margin-top: 14px;
+}
+
+.social-contain {
+	float: left;
+	min-width: 220px;
+	margin-right: 47px;
+	padding-top: 5px;
+}
+
+.social {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	width: 61px;
+	height: 24px;
+	background: #e1e1e1;
+	text-decoration: none;
+	margin-right: 25px;
+	color: #fff;
+	font-size: 24px;
+	border-radius: 50%;
+	padding: 18px 0;
 }
