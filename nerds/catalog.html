@@ -35,40 +35,39 @@
 				</ul>
 			</nav>
 		</div>
+		<div class="container contain-introduction">
+			<div class="inner-introduction">
+				<h1>Добро пожаловать в магазин<br>готовых макетов</h1>
+			</div>
+		</div>
 	</header>
 
-	<main class="main-contain">
-		<div class="container clearfix">	
-			<div class="contain-introduction">
-				<div class="contain-title inner-intriduction">
-					<h2>Добро пожаловать в магазин готовых макетов</h2>
-				</div>
-			</div>
-			<div class="contain-inner">
-				<div class="inner-filters">
-					<form action="" class="filters">
+	<main class="main-contain-inner">
+		<div class="container clearfix">
+			<div class="inner-filters">
+				<form action="/echo" method="post" class="filters">
+					<div class="filter-price">
 						<h3 class="filters-title">
 							Стоимость:
 						</h3>
 
 						<div class="price-range">
 							<div class="range-controls">
-            					<div class="scale">
-            						<div class="bar" style="width: 80%;" ></div>
-            					</div>
-            					<div class="toggle min-toggle"></div>
-            					<div class="toggle max-toggle"></div>
-        					</div>
+								<div class="scale">
+									<div class="bar" style="width: 80%;" ></div>
+								</div>
+								<div class="toggle min-toggle"></div>
+								<div class="toggle max-toggle"></div>
+							</div>
 						</div>
-						<div class="">
-							
+						<div class="price-result">
+							<label for="min">От</label>
+							<input type="text" id="min" name="min-price" value="0" />
+							<label for="max">До</label>
+							<input type="text" id="max" name="max-price" value="15000" />
 						</div>
-						<div class="">
-							
-						</div>
-							
-						</div>
-
+					</div>
+					<div class="filter-grids">
 						<h3 class="filters-title">
 							Сетка:
 						</h3>
@@ -81,7 +80,8 @@
 
 						<input type="radio" name="grid" id="fluid" value="fluid" >
 						<label for="fluid">Резиновая</label>
-
+					</div>
+					<div class="filter-features">
 						<h3 class="filters-title">
 							Особенности:
 						</h3>
@@ -100,68 +100,66 @@
 
 						<input type="checkbox" name="basket" id="basket">
 						<label for="basket">Корзина</label>
-
-						<input type="submit" class="btn btn-filters" value="Показать">
-
-					</form>
+					</div>
+					<input type="submit" class="btn btn-filters" value="Показать">
+				</form>
+			</div>
+			<div class="inner-result">
+				<div class="inner-sorting">
+					<div class="sorting">
+						<span>Сортировать:</span>
+						<a href="#">По цене</a>
+						<a href="#">По типу</a>
+						<a href="#">По функционалу</a>
+					</div>
+					<div class="sorting-arrow">
+						<a href="#">По возрастанию</a>
+						<a href="#">По убыванию</a>
+					</div>
 				</div>
-				<div class="inner-result">
-					<div class="inner-sorting">
-						<div class="sorting">
-							<span>Сортировать:</span>
-							<a href="#">По цене</a>
-							<a href="#">По типу</a>
-							<a href="#">По функционалу</a>
+				<div class="inner-products">
+					<article class="products-item">
+						<div class="item">
+							<figure>
+								<img src="img/item-1.jpg" width="240" height="240" alt="">
+							</figure>
 						</div>
-						<div class="sorting-arrow">
-							<a href="#">По возрастанию</a>
-							<a href="#">По убыванию</a>
+					</article>
+					<article class="products-item">
+						<div class="item">
+							<figure>
+								<img src="img/item-2.jpg" width="240" height="240" alt="">
+							</figure>
 						</div>
-					</div>
-					<div class="inner-products">
-						<article class="products-item">
-							<div class="item">
-								<figure>
-									<img src="img/item-1.jpg" width="240" height="240" alt="">
-								</figure>
-							</div>
-						</article>
-						<article class="products-item">
-							<div class="item">
-								<figure>
-									<img src="img/item-2.jpg" width="240" height="240" alt="">
-								</figure>
-							</div>
-						</article>
-						<article class="products-item">
-							<div class="item">
-								<figure>
-									<img src="img/item-3.jpg" width="240" height="240" alt="">
-								</figure>
-							</div>
-						</article>
-						<article class="products-item">
-							<div class="item">
-								<figure>
-									<img src="img/item-4.jpg" width="240" height="240" alt="">
-								</figure>
-							</div>
-						</article>
-						<article class="products-item">
-							<div class="item">
-								<figure>
-									<img src="img/item-5.jpg" width="240" height="240" alt="">
-								</figure>
-							</div>
-						</article>
-						<article class="products-item">
-							<div class="item">
-								<figure>
-									<img src="img/item-6.jpg" width="240" height="240" alt="">
-								</figure>
-							</div>
-						</article>
-					</div>
+					</article>
+					<article class="products-item">
+						<div class="item">
+							<figure>
+								<img src="img/item-3.jpg" width="240" height="240" alt="">
+							</figure>
+						</div>
+					</article>
+					<article class="products-item">
+						<div class="item">
+							<figure>
+								<img src="img/item-4.jpg" width="240" height="240" alt="">
+							</figure>
+						</div>
+					</article>
+					<article class="products-item">
+						<div class="item">
+							<figure>
+								<img src="img/item-5.jpg" width="240" height="240" alt="">
+							</figure>
+						</div>
+					</article>
+					<article class="products-item">
+						<div class="item">
+							<figure>
+								<img src="img/item-6.jpg" width="240" height="240" alt="">
+							</figure>
+						</div>
+					</article>
 				</div>
 				<div class="paginator">
 					<a href="#" class="page-active">1</a>
@@ -186,6 +184,22 @@
 				</p>
 				<a href="#" class="btn btn-contacts">Напишите нам</a>
 			</div>
+			<form action="/echo" method="post" class="contact-us" >
+				<div class="btn-close"></div>
+				<div class="info clearfix">
+					<div class="info-name">
+						<label for="name">Ваше имя:</label>
+						<input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" />
+					</div>
+					<div class="info-email">
+						<label for="email">Ваш e-mail:</label>
+						<input type="text" name="email" id="email" placeholder="Для отправки отчета" />
+					</div>
+				</div>
+				<label for="letter">Текст письма:</label>
+				<textarea name="letter" id="letter" placeholder="В свободной форме"></textarea>
+				<input type="submit" value="Отправить" class="btn btn-submit" />
+			</form>
 		</div>
 		<div class="container container-footer clearfix">
 			<div class="social-contain">
@@ -205,6 +219,6 @@
 			</div>
 		</div>
 	</footer>
-
+	<script src="scripts/script.js" ></script>
 </body>
 </html>
