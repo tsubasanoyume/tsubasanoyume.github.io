@@ -622,6 +622,7 @@ li.basket {
 	display: block;
 	margin-bottom: 15px;
 	cursor: pointer;
+	opacity: .9;
 }
 
 .filter-grids input[type='radio'] + label::before,
@@ -633,6 +634,7 @@ li.basket {
 	width: 25px;
 	height: 25px;
 	margin-right: 10px;
+	opacity: .9;
 }
 
 .filter-grids input[type='radio'] + label::before {
@@ -651,12 +653,186 @@ li.basket {
 	background: url('../img/icon-checkbox-checked.png') no-repeat center;
 }
 
+.filter-grids input[type='radio'] + label:hover,
+.filter-features input[type='checkbox'] + label:hover,
+.filter-grids input[type='radio'] + label:hover::before,
+.filter-features input[type='checkbox'] + label:hover::before {
+	opacity: 1;
+}
+
+.filter-grids input[type='radio']:disabled + label,
+.filter-features input[type='checkbox']:disabled + label,
+.filter-grids input[type='radio']:disabled + label::before,
+.filter-features input[type='checkbox']:disabled + label::before {
+	opacity: .5;
+}
+
 .btn-filters {
 	width: 155px;
 	background: #f1f1f1;
 	color: #000;
 	border-radius: 3px;
 	font-weight: bold;
+}
+
+.btn-filters:hover {
+	background: #e5e5e5;
+}
+
+.btn-filters:active {
+	background: #d5d5d5;
+	-webkit-box-shadow: inset 0 3px 0 0 #b5b5b5;
+	-moz-box-shadow: inset 0 3px 0 0 #b5b5b5;
+	box-shadow: inset 0 3px 0 0 #b5b5b5;
+}
+
+/* сортировка */
+
+.inner-sorting {
+	font-size: 11px;
+	line-height: 21px;
+
+	text-transform: uppercase;
+	margin: 20px 0 18px 0;
+	padding-left: 38px;
+}
+
+.inner-sorting span {
+	font-weight: bold;
+	margin-right: 40px;
+}
+
+.inner-sorting a {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 48px;
+	margin-left: -4px;
+
+	color: #000;
+	opacity: .3;
+	text-decoration: none;
+
+	border-bottom: 1px dotted #00c973;
+}
+
+.inner-sorting .arrow {
+	position: relative;
+	font-size: 0;
+
+	margin: 0;
+	border: none;
+	opacity: 1;
+}
+
+.arrow-down::after {
+	content: '\25bc';
+	position: absolute;
+	left: 59px;
+
+	font-family: symbols-nerds;
+	font-size: 22px;
+	color: #00c973;
+}
+
+.arrow-up::after {
+	content: '\25b2';
+	position: absolute;
+	left: 73px;
+
+	font-family: symbols-nerds;
+	font-size: 22px;
+	color: #c1c1c1;
+}
+
+.inner-sorting a:hover {
+	opacity: 1;
+	border-bottom: 1px solid #00c973;
+}
+
+.inner-sorting a:active,
+.inner-sorting a.active-sort {
+	opacity: 1;
+	border-bottom: none;
+}
+
+.inner-products {
+	padding-left: 39px;
+}
+
+.products-item {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+
+	margin-right: 76px;
+	margin-bottom: 72px;
+	margin-top: 2px;
+
+	border-top: 30px solid #f1f1f1;
+	border-radius: 5px;
+}
+
+.products-item::before,
+.products-item::after,
+.item::before {
+	content: '';
+	position: absolute;
+	top: -20px;
+	left: 12px;
+
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.products-item::after {
+	left: 29px;
+}
+
+.item::before {
+	left: 47px;
+}
+
+.products-item:nth-child(2n) {
+	margin-right: 0;
+}
+
+.products-item:hover {
+	border-top: 30px solid #797979;
+}
+
+.products-item:hover .item-info {
+	display: block;
+}
+
+.item-info {
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+
+	width: 140px;
+	height: 140px;
+	background: #fff;
+	padding: 30px;
+
+	text-align: center;
+}
+
+.item-info h3 {
+	margin: 0;
+}
+
+.item-info p {
+	font-size: 13px;
+	margin: 6px 0 29px 0;
+	line-height: 19px;
+	border-radius: 3px;
+}
+
+.item-info a {
+	font-size: 16px;
 }
 
 /* стили футера */
@@ -667,6 +843,56 @@ li.basket {
 .contain-map {
 	position: relative;
 	margin-bottom: 75px;
+}
+
+/* пагинация */
+.paginator {
+	padding-left: 38px;
+	padding-top: 2px;
+	margin-bottom: 22px;
+
+	font-size: 12px;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+
+.paginator a,
+.paginator span {
+	display: inline-block;
+	padding: 8px 15px;
+	margin-right: 6px;
+	margin-top: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 2px solid #f1f1f1;
+	border-radius: 3px;
+	color: black;
+	background: #f1f1f1;
+	width: 5px;
+}
+
+.paginator span {
+	background: #fff;
+	border: 2px solid #f1f1f1;
+}
+
+.paginator a:hover {
+	border: 2px solid #e5e5e5;
+}
+
+.paginator a:active {
+	padding: 10px 17px;
+	border: none;
+}
+
+
+.paginator .next {
+	text-align: center;
+	width: 108px;
 }
 
 .map {
@@ -680,18 +906,33 @@ li.basket {
 	top: 90px;
 	left: 510px;
 
-	height: 180px;
+	height: 190px;
 	width: 210px;
-	padding: 30px 20px;
+	padding: 24px 20px;
 	background: #fff;
 }
 
 .map-contacts h3 {
+	font-size: 15px;
 	margin: 0;
 }
 
+.map-contacts p {
+	padding-left: 3px;
+}
+
+.map-contacts .address {
+	margin: 10px 0;
+}
+
+.map-contacts .phone {
+	margin-bottom: 28px;
+}
+
+
 .btn-contacts {
-	width: 100%;
+	width: 205px;
+	margin-left: 5px;
 }
 
 .btn-submit {

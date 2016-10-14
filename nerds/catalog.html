@@ -75,7 +75,7 @@
 						<input type="radio" name="grid" id="adaptive" value="adaptive" checked>
 						<label for="adaptive">Адаптивная</label>
 
-						<input type="radio" name="grid" id="fix" value="fix" >
+						<input type="radio" name="grid" id="fix" value="fix">
 						<label for="fix">Фиксированная</label>
 
 						<input type="radio" name="grid" id="fluid" value="fluid" >
@@ -106,66 +106,104 @@
 			</div>
 			<div class="inner-result">
 				<div class="inner-sorting">
-					<div class="sorting">
-						<span>Сортировать:</span>
-						<a href="#">По цене</a>
-						<a href="#">По типу</a>
-						<a href="#">По функционалу</a>
-					</div>
-					<div class="sorting-arrow">
-						<a href="#">По возрастанию</a>
-						<a href="#">По убыванию</a>
-					</div>
+					<span>Сортировать:</span>
+					<a href="#">По цене</a>
+					<a href="#">По типу</a>
+					<a href="#">По функционалу</a>
+					<a href="#" class="arrow arrow-down">По возрастанию</a>
+					<a href="#" class="arrow arrow-up">По убыванию</a>
 				</div>
 				<div class="inner-products">
 					<article class="products-item">
 						<div class="item">
-							<figure>
+							<a href="#">
 								<img src="img/item-1.jpg" width="240" height="240" alt="">
-							</figure>
+							</a>
+							<div class="item-info">
+								<h3>Aviator</h3>
+								<p>Одностраничный макет с дизайном</p>
+								<a href="#" class="btn">
+									8000 р.
+								</a>
+							</div>
 						</div>
 					</article>
 					<article class="products-item">
 						<div class="item">
-							<figure>
+							<a href="#">
 								<img src="img/item-2.jpg" width="240" height="240" alt="">
-							</figure>
+							</a>
+							<div class="item-info">
+								<h3>Sunset</h3>
+								<p>Интернет-магазин с личным кабинетом</p>
+								<a href="#" class="btn">
+									10000 р.
+								</a>
+							</div>
 						</div>
 					</article>
 					<article class="products-item">
 						<div class="item">
-							<figure>
+							<a href="#">
 								<img src="img/item-3.jpg" width="240" height="240" alt="">
-							</figure>
+							</a>
+							<div class="item-info">
+								<h3>Forte</h3>
+								<p>Отличный макет для личного блога</p>
+								<a href="#" class="btn">
+									5000 р.
+								</a>
+							</div>
 						</div>
 					</article>
 					<article class="products-item">
 						<div class="item">
-							<figure>
+							<a href="#">
 								<img src="img/item-4.jpg" width="240" height="240" alt="">
-							</figure>
+							</a>
+							<div class="item-info">
+								<h3>Modern Thai</h3>
+								<p>Сайт для ресторана быстрого питания</p>
+								<a href="#" class="btn">
+									12000 р.
+								</a>
+							</div>
 						</div>
 					</article>
 					<article class="products-item">
 						<div class="item">
-							<figure>
+							<a href="#">
 								<img src="img/item-5.jpg" width="240" height="240" alt="">
-							</figure>
+							</a>
+							<div class="item-info">
+								<h3>Avenue</h3>
+								<p>Макет для блога о путешествиях</p>
+								<a href="#" class="btn">
+									8000 р.
+								</a>
+							</div>
 						</div>
 					</article>
 					<article class="products-item">
 						<div class="item">
-							<figure>
+							<a href="#">
 								<img src="img/item-6.jpg" width="240" height="240" alt="">
-							</figure>
+							</a>
+							<div class="item-info">
+								<h3>Dovetail</h3>
+								<p>Интернет-магазин с галереей товаров</p>
+								<a href="#" class="btn">
+									14000 р.
+								</a>
+							</div>
 						</div>
 					</article>
 				</div>
 				<div class="paginator">
-					<a href="#" class="page-active">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-					<a href="#">Следующая</a>
+					<span class="page-active">1</span>
+					<a href="#" class="btn-filters">2</a>
+					<a href="#" class="btn-filters">3</a>
+					<a href="#" class="btn-filters next">Следующая</a>
 				</div>
 			</div>
 		</div>
@@ -176,10 +214,10 @@
 			<div class="map"></div>
 			<div class="map-contacts">
 				<h3>NЁRDS DESIGN STUDIO</h3>
-				<p>
+				<p class="address">
 					191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
 				</p>
-				<p>
+				<p class="phone">
 					тел. +7 (812) 275-75-75
 				</p>
 				<a href="#" class="btn btn-contacts">Напишите нам</a>
