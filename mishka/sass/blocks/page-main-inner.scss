@@ -1,0 +1,49 @@
+.page-main-inner__title {
+  @include font-style(27px, 30px);
+
+  margin: 0 -30px;
+
+  text-align: center;
+  padding: 70px 30px 77px;
+
+  background: $color-grey;
+}
+
+@media ($tablet-widths) {
+  .page-main-inner__title {
+    @include font-resize(43px, 50px);
+
+    position: relative;
+    margin: 0 -50px;
+    padding: 95px 50px 80px;
+
+    &:after {
+      content: "";
+
+      display: block;
+      width: calc(100% + 20px);
+      height: 34px;
+      position: absolute;
+      bottom: -10px;
+      left: -5px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      z-index: 1;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .page-main-inner__title {
+    @include font-resize(53px, 57px);
+
+    padding-bottom: 100px;
+
+    &:after {
+      bottom: -20px;
+      left: -5px;
+    }
+  }
+}

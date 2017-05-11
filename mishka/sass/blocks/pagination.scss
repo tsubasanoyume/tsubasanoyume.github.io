@@ -1,0 +1,58 @@
+.pagination {
+  font-size: 0;
+
+  margin-bottom: 38px;
+}
+
+.pagination__button {
+  display: inline-block;
+  vertical-align: top;
+
+  height: 50px;
+
+  border: 1px solid $main-color-border;
+}
+
+.pagination__button--previous {
+  width: 130px;
+
+  background-image: url("../img/icon-left-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pagination__button--next {
+  width: 126px;
+
+  background-image: url("../img/icon-right-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media ($tablet-widths) {
+  .pagination {
+    position: absolute;
+
+    bottom: 13px;
+    right: 50px;
+  }
+
+  .pagination__button {
+    width: 87px;
+    border: none;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &:active {
+      opacity: .3;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .pagination {
+    bottom: 63px;
+  }
+}

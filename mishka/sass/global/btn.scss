@@ -1,0 +1,101 @@
+.btn {
+  @include font-style(17px, 16px);
+
+  color: $color-light-black;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  display: block;
+
+  border: 2px solid $color-light-black;
+  text-align: center;
+  padding: 17px 0;
+
+  &:hover {
+    background: $color-light-black;
+    color: #fff;
+  }
+
+  &:active {
+    color: $color-btn-active;
+  }
+
+  &--basket {
+    background: $color-light-green;
+    border: 2px solid $color-light-green;
+    color: #fff;
+    width: 100%;
+
+    &:hover {
+      background: $color-light-green;
+    }
+
+    &:active {
+      color: #fff;
+      background: $color-light-green;
+    }
+  }
+
+  &--order {
+    @media ($tablet-widths) {
+      width: 288px;
+      margin-left: -2px;
+    }
+
+    @media ($desktop-widths) {
+      width: 288px;
+      padding-top: 14px;
+    }
+  }
+
+  &--reviews {
+    padding-top: 15px;
+    padding-bottom: 17px;
+
+    @media ($tablet-widths) {
+      width: 172px;
+
+      position: absolute;
+      top: 79px;
+      right: 49px;
+    }
+  }
+
+  &--write {
+    @media ($tablet-widths) {
+      width: 226px;
+      padding-top: 15px;
+
+      margin: 0 auto;
+    }
+
+    @media ($desktop-widths) {
+      margin: 0;
+    }
+  }
+
+  &--send {
+    width: 100%;
+    background: #fff;
+
+    @media ($tablet-widths) {
+      width: 230px;
+    }
+
+    @media ($desktop-widths) {
+      margin-left: 175px;
+    }
+  }
+
+  &--make {
+    padding-bottom: 15px;
+
+    @media ($tablet-widths) {
+      padding-bottom: 15px;
+    }
+
+    @media ($desktop-widths) {
+      width: 225px;
+    }
+  }
+}
